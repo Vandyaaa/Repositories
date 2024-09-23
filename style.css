@@ -84,6 +84,11 @@ header{
     place-items: center;
 }
 
+.ikonmode{
+    display: grid;
+    place-items: center;
+}
+
 .malam i {
     font-size: 20px;
     display: grid;
