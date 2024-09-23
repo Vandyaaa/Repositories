@@ -213,6 +213,7 @@ header{
     display: grid;
     place-items: center;
     height: calc(100vh - 100px);
+    margin-bottom: 70px;
 }
 
 .logo .logoku{
@@ -243,6 +244,7 @@ header{
 
     .logo img{
         width: 100%;
+        top: -180px;
     }
 }
 
