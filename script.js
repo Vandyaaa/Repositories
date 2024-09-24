@@ -50,6 +50,8 @@ const bawah = ScrollReveal({
     reset: true ,
 })
 bawah.reveal('.back-logo', {})
+bawah.reveal('.div-surat', {})
+bawah.reveal('#surah', {})
 bawah.reveal('.logoku', {delay:1000})
 bawah.reveal('.link:nth-child(n)', {delay:0})
 bawah.reveal('.search-container', {delay:0})
