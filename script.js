@@ -86,27 +86,28 @@ const opacity = ScrollReveal({
     origin: 'top',
     reset: true ,
 })
+
 opacity.reveal('.end', {})
 
 
 function filterItems() {
-            const searchInput = document.getElementById('search').value.toLowerCase();
-            const items = document.querySelectorAll('.link');
-            items.forEach(function(item) {
-                const itemName = item.querySelector('.item').textContent.toLowerCase();
-                if (itemName.includes(searchInput)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+const searchInput = document.getElementById('search').value.toLowerCase();
+const items = document.querySelectorAll('.link');
+items.forEach(function(item) {
+    const itemName = item.querySelector('.item').textContent.toLowerCase();
+    if (itemName.includes(searchInput)) {
+        item.classList.remove('hidden');
+    } else {
+        item.classList.add('hidden');
+    }
+});
 
-            if (searchInput === '') {
-                items.forEach(function(item) {
-                    item.classList.remove('hidden');
-                });
-            }
-        }
+if (searchInput === '') {
+    items.forEach(function(item) {
+        item.classList.remove('hidden');
+    });
+}
+}
 
 const toggleDarkMode = () => {
         document.body.classList.toggle('dark-mode');
