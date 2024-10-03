@@ -56,7 +56,7 @@ body{
 }
 
 body.hym {
-    background-color: var(--5);
+    background-color: var(--3);
 }
 header{
     display: flex;
@@ -68,7 +68,7 @@ header{
 
 .txtlogo{
     font-weight: 600;
-    color: var(--5);
+    color: var(--3);
     transition: .3s;
 }
 
@@ -124,7 +124,7 @@ header{
 .cari{
     width: 50px;
     height: 50px;
-    background-color: var(--5);
+    background-color: var(--3);
     z-index: 5;
     position: absolute;
     left: 50px;
@@ -194,7 +194,7 @@ header{
 .github{
     width: 50px;
     height: 50px;
-    background-color: var(--5);
+    background-color: var(--3);
     z-index: 5;
     position: absolute;
     left: 0;
@@ -272,8 +272,14 @@ header{
     position: absolute;
     z-index: -2;
     font-size: clamp(2rem, 10vw, 15rem);
-        text-align: center;
+    text-align: center;
     opacity: .2;
+    transition: .5s;
+    color: black;
+}
+
+.back-logo.hym {
+color: white;
 }
 
 section{

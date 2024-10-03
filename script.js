@@ -23,6 +23,7 @@ function dark(){
         ...document.querySelectorAll(".kiri"),
         document.querySelector(".github"),
         document.querySelector(".end"),
+        document.querySelector(".back-logo"),
         
 
     ];
