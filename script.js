@@ -11,26 +11,26 @@ function cari(){
     });
 }
 
-function dark(){
-    var darkmod = [ 
-        document.getElementById("bodyd"),
-        document.getElementById("txtlogo-d"),
-        document.getElementById("darkmodbtn"),
-        document.getElementById("logo-d"),
-        document.getElementById("cari-d"),
-        document.querySelector("section"),
-        ...document.querySelectorAll(".kanan"),
-        ...document.querySelectorAll(".kiri"),
-        document.querySelector(".github"),
-        document.querySelector(".end"),
-        document.querySelector(".back-logo"),
+// function dark(){
+//     var darkmod = [ 
+//         document.getElementById("bodyd"),
+//         document.getElementById("txtlogo-d"),
+//         document.getElementById("darkmodbtn"),
+//         document.getElementById("logo-d"),
+//         document.getElementById("cari-d"),
+//         document.querySelector("section"),
+//         ...document.querySelectorAll(".kanan"),
+//         ...document.querySelectorAll(".kiri"),
+//         document.querySelector(".github"),
+//         document.querySelector(".end"),
+//         document.querySelector(".back-logo"),
         
 
-    ];
-    darkmod.forEach(function (darkmod) {
-       darkmod.classList.toggle('hym') ;
-    });
-}
+//     ];
+//     darkmod.forEach(function (darkmod) {
+//        darkmod.classList.toggle('hym') ;
+//     });
+// }
 
 const atas = ScrollReveal({
     
