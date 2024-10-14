@@ -36,6 +36,10 @@
     background-color: var(--dr5);
 }
 
+::selection{
+    background-color: var(--6);
+}
+
 *{
     margin: 0;
     padding: 0;
