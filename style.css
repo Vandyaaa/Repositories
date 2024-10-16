@@ -84,12 +84,9 @@ header{
     place-items: center;
 }
 
-.malam i {
-    font-size: 20px;
-    display: grid;
-    place-items: center;
-    transition: .3s;
-    position: absolute;
+.malam img {
+    width: 30px;
+    filter: grayscale(100%) brightness(30%);
 }
 
 .malam .fi1{
@@ -114,12 +111,14 @@ header{
     overflow: hidden;
     margin-inline: 100px;
     height: 50px;
+    border-radius: 10px;
 }
 
 .cari{
     width: 50px;
     height: 50px;
     background-color: var(--8);
+    border-radius: 0px 10px 10px 0px;
     z-index: 5;
     position: absolute;
     left: 50px;
@@ -131,10 +130,6 @@ header{
 
 .cari i{
     transition: .4s;
-}
-
-.cari.mencari{
-    background-color: var();
 }
 
 .cari.mencari i{
@@ -151,14 +146,15 @@ header{
     font-style: normal;
     border: none;
     outline: none;
-    background-color: var(--1);
+    background-color: var(--5II);
     position: absolute;
     transform: translateX(-100%) translateY(0);
     left: 60px;
     opacity: 0;
     transition:  all .5s, opacity 1s;
     z-index: 2;
-    
+    border-radius: 10px;
+    color: var(--1);
 }
 
 .search.mencari{
@@ -337,6 +333,7 @@ section{
     height: 50px;
     background-color: var(--1);
     display: flex;
+    border-radius: 10px;
     
     color: var(--dr3);
     overflow: hidden;
