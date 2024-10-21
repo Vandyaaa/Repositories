@@ -8,21 +8,24 @@
 } */
 
 :root {
---1: #F5F1E3;
+    --1: #F5F1E3;
     --2: #F5F1E3;
     --wt3: rgb(212, 212, 212);
-    --dr3: #0a0a0a;
+
+    --dr3: #0f0f0f;
     --3: #050505;
-    --4: #1c789c;
+    --4: #d877a4;
+
     --5: #050505;
-    --dr5: #413d37;
+    --dr5: #0a0a0a;
     --dr5II: #5a554d;
     --5II: #111111;
     --6: #624a2c;
-    --7: #e3d7cb;
-    --8: #7CBBBB;
-}
+    --7: #e4dec6;
 
+    /* --8: #ffa3c9; */
+    --8: #bb2626;
+}
 ::-webkit-scrollbar {
     background-color: var(--dr3);
     width: 5px;
@@ -44,6 +47,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 a{
@@ -62,7 +66,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 34px;
+    padding-inline: 84px;
     height: 70px;
 }
 
@@ -86,7 +90,6 @@ header{
 
 .malam img {
     width: 30px;
-    filter: grayscale(100%) brightness(30%);
 }
 
 .malam .fi1{
@@ -140,7 +143,7 @@ header{
 .search {
     padding: 8px;
     width: 300px;
-    height: calc(50px - 16px);
+    height: calc(50px - 22px);
     font-family: "Arvo", serif;
     font-weight: 600;
     font-style: normal;
@@ -154,6 +157,7 @@ header{
     transition:  all .5s, opacity 1s;
     z-index: 2;
     border-radius: 10px;
+    border: 3px solid var(--8);
     color: var(--1);
 }
 
@@ -177,14 +181,15 @@ header{
 .github{
     width: 50px;
     height: 50px;
-    background-color: var(--8);
+    background-color: var(--dr3);
     z-index: 5;
     position: absolute;
     left: 0;
     display: grid;
     place-items: center;
-    color: var(--dr3);
+    color: var(--2);
     transition: .3s;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .logo{
@@ -198,31 +203,79 @@ header{
     display: grid;
     place-items: center;
     position: relative;
-    width: 20%;
+    width: 5%;
+    z-index: -1;
 }
+
 
 .logo img{
     width: 100%;
     position: absolute;
     transition: .5s;
     animation: kedep 4s linear infinite;
-    transform: translateY(10px);
-}
-
-@keyframes kedep {
-    50%{
-        transform: translateY(-10px);
-    }
 }
 
 @media (max-width:760px) {
     .logo .logoku{
-        width: 30%;
+        width: 10%;
     }
 
     .logo img{
         width: 100%;
-        top: -180px;
+    }
+}
+
+.Obg {
+    position: absolute;
+    border: 15px solid var(--8);
+    border-radius: 50%;
+    z-index: -2;
+    opacity: .3;
+    animation: radio 3s linear infinite;
+    opacity: 0;
+}
+
+.Obg:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    animation-delay: 1s;
+}
+
+.Obg:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    animation-delay: 2s;
+}
+
+.Obg:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    animation-delay: 3s;
+}
+
+@media (max-width:760px) {
+    .Obg:nth-child(1) {
+            width: 70px;
+            height: 70px;
+            animation-delay: 1s;
+        }
+    
+        .Obg:nth-child(2) {
+            width:140px;
+            height: 140px;
+            animation-delay: 2s;
+        }
+    
+        .Obg:nth-child(3) {
+            width: 210px;
+            height: 210px;
+            animation-delay: 3s;
+        }
+}
+
+@keyframes radio {
+    50% {
+        opacity: 1;
     }
 }
 
@@ -248,12 +301,24 @@ header{
 
 .back-logo{
     position: absolute;
-    z-index: -2;
-    font-size: clamp(2rem, 10vw, 15rem);
+    z-index: -3;
+    font-size: clamp(2rem, 10vw, 14rem);
     text-align: center;
-    opacity: .2;
     transition: .5s;
-    color: var(--1);
+    color: #252423;
+    letter-spacing: 5px;
+    opacity: .4;
+    animation: txtlight 5s ease-in-out infinite;
+}
+
+@keyframes txtlight {
+    50% {
+
+    }
+}
+
+.rede {
+    color: var(--8);
 }
 
 section{
@@ -331,11 +396,13 @@ section{
 .link .kanan{
     width: 50px;
     height: 50px;
-    background-color: var(--1);
+    background-color: transparent;
+    outline: 3px solid var(--dr3);
+    outline-offset: -3px;
     display: flex;
     border-radius: 10px;
-    
-    color: var(--dr3);
+    transition: .3s;
+    color: var(--2);
     overflow: hidden;
     position: relative;
 }
@@ -359,6 +426,12 @@ section{
     /* background-color: red; */
 }
 
+.kanan:hover {
+    background-color: var(--7);
+    outline: 3px solid var(--7);
+    color: var(--3);
+}
+
 .kanan:hover i:nth-child(1){
     transform: translateX(100%);
 }
@@ -377,6 +450,8 @@ section{
 .hidden {
     display: none;
 }
+
+
 
 footer{
     height: 50vh;

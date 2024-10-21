@@ -115,3 +115,30 @@ const toggleDarkMode = () => {
     }
 
     document.querySelector('.dark-mode').addEventListener('click', toggleDarkMode);
+
+
+
+function changeColorOneByOne() {
+        const textElement = document.getElementsByClassName('.back-logo');
+        const textContent = textElement.textContent;
+        textElement.textContent = '';  // Clear the current text
+        let index = 0;
+
+        function changeColor() {
+            if (index < textContent.length) {
+                const span = document.createElement('span');
+                span.textContent = textContent[index];
+                textElement.appendChild(span);
+                setTimeout(() => {
+                    span.classList.add('rede');
+                }, 500 * index);
+                index++;
+                setTimeout(changeColor, 500);  // Wait 0.5 seconds for the next letter
+            }
+        }
+
+        changeColor();
+    }
+
+    // Call the function on page load
+    window.onload = changeColorOneByOne;
